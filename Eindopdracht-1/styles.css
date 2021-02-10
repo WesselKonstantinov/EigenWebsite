@@ -1,0 +1,362 @@
+/* Base Styles And Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.page {
+    display: grid;
+    grid-gap: 2px;
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Header And Logo Styles */
+.site-header {
+    background-color: #277a7a;
+    border: 2px solid #144141;
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 3;
+}
+
+.site-header > a {
+    height: 36px; /* Voor een beter en mooiere centrering van de logo */
+}
+
+.site-logo {
+    width: 36px;
+    height: 36px;
+    margin: 0 10px;
+}
+
+.horizontal-nav {
+    display: none; /* Zodat alleen het dropdown menu te zien is */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-nav {
+    display: inline-block;
+    position: relative;
+    height: 36px;
+}
+
+.dropdown-nav summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.dropdown-nav summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown-nav details[open] summary::before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    cursor: default;
+  } /* Zodat het dropdown menu overal op de pagina te sluiten is */
+
+.dropdown-nav-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.dropdown-nav-content {
+    position: absolute;
+    width: 180px;
+    background-color: #ffffff;
+    border: 2px solid #6a9191;
+    list-style: none;
+    text-align: center;
+    z-index: 1;
+}
+
+.dropdown-nav-content a {
+    display: block;
+    padding: 1em;
+    color: #277a7a;
+    text-decoration: none;
+}
+
+.dropdown-nav-content a:hover {
+    color: #ffffff;
+    background-color: #6a9191;
+}
+
+/* Search Bar And Icon Styles */
+.search-icon {
+    width: 24px;
+    height: 24px;
+    background: url(images/white-search-icon.png) no-repeat center;
+    background-size: 18px;
+    cursor: pointer;
+}
+
+.search-form {
+    margin-left: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    font-family: inherit;
+    font-size: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 2px;
+}
+
+/* Main Content Styles */
+.main-site-content {
+    border: 2px solid #144141;
+    background-color: #277a7a;
+    grid-row: 2 / 10;
+    grid-column: 1 / 3;
+}
+
+.site-banner {
+    height: 414px;
+    background-image: url(images/StepMania-logo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.site-banner h1 {
+    top: 40px;
+    position: relative;
+    font-size: 2.8em;
+    color: #111111;
+}
+
+.site-banner a {
+    position: relative;
+    top: 250px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #111111;
+    padding: 10px;
+    border: 3px solid #111111;
+    border-radius: 5px;
+}
+
+.site-banner a:hover {
+    background-color: #277a7a;
+    color: #ffffff;
+    border-color: #6a9191;
+}
+
+.main-site-article-heading {
+    margin: 10px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.main-site-article img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.main-site-article figcaption {
+    text-align: center;
+    font-size: 85%;
+}
+
+.main-site-article p,
+.main-site-article h2,
+.main-site-article h3,
+.main-site-article h4 {
+    margin: 10px;
+}
+
+.main-site-article ul {
+    margin-left: 25px;
+}
+
+.main-site-article ol {
+    margin-left: 35px;
+}
+
+.main-site-article ol a {
+    background: url(images/white-external-link-icon.png) no-repeat 100% 0;
+    padding-right: 19px;
+    text-decoration: none;
+    color: #fffd90;
+}
+
+.main-site-article ol a:visited {
+    color: #ffcf67;
+}
+
+.main-site-article ol a:hover {
+    text-decoration: underline;
+}
+
+.main-site-article ol a:active {
+    text-decoration: underline;
+    background-color: #6a9191;
+}
+
+.main-site-article iframe {
+    display: block;
+    border: none;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+/* Newsletter Styles */
+.newsletter {
+    background-color: #277a7a;
+    border: 2px solid #144141;
+    grid-row: 10 / 13;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.newsletter-head,
+.form-row {
+    margin: 15px 5px;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 5px;
+    width: 201px;
+}
+
+.newsletter-form button {
+    background-color: #23a839;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+/* External Links Styles */
+.external-links {
+    background-color: #277a7a;
+    border: 2px solid #144141;
+    grid-row: 13 / 16;
+    grid-column: 1 / 3;
+}
+
+.external-links h2 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.external-links ul {
+    list-style: none;
+    padding: 15px;
+    font-size: 95%;
+}
+
+.external-links a {
+    background: url(images/white-external-link-icon.png) no-repeat 100% 0;
+    padding-right: 19px;
+    text-decoration: none;
+    color: #fffd90;
+}
+
+.external-links a:visited {
+    color: #ffcf67;
+}
+
+.external-links a:hover {
+    text-decoration: underline;
+}
+
+.external-links a:active {
+    text-decoration: underline;
+    background-color: #6a9191;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #277a7a;
+    border: 2px solid #144141;
+    grid-column: 1 / 3;
+}
+
+.site-footer p {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Media Queries For Tablet Styles */
+@media only screen and (min-width: 768px) {
+    /* Grid Layout */
+    .newsletter {
+        grid-row: 10 / 16;
+        grid-column: 1 / 2;
+    }
+
+    .external-links {
+        grid-row: 10 / 16;
+        grid-column: 2 / 3;
+    }
+
+    /* Header And Navigation Styles */
+    .dropdown-nav {
+        display: none; /* Zorgt ervoor dat de dropdown menu verdwijnt */
+    }
+
+    .horizontal-nav {
+        display: block;
+        width: 100%;
+    } /* Horizontale navigatiemenu komt nu in de plaats */
+
+    .horizontal-nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .horizontal-nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .horizontal-nav a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 0;
+    }
+
+    .horizontal-nav a:hover {
+       background-color: #6a9191;
+    }
+
+    .search-form {
+        margin-left: 10px;
+    }
+
+    /* Newsletter Styles */
+    .form-row {
+        margin: 30px 0;
+    }
+}
+
+/* Media Queries For Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    /* Page Layout */
+    body {
+        width: 980px;
+        margin: 0 auto;
+    }
+}

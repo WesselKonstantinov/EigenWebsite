@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installatie van StepMania</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="site-header">
+            <a href="index.html">
+                <img class="site-logo" src="images/site-logo.png" alt="Een oranje muzieknoot in de vorm van een pijl">
+            </a>
+
+            <!-- Navigatiemenu voor mobiel -->
+            <nav class="dropdown-nav">
+                <details>
+                    <summary>
+                        <img class="dropdown-nav-icon" src="images/white-hamburger-icon.png"
+                            alt="Een wit hamburger-icoontje">
+                    </summary>
+                    <ul class="dropdown-nav-content">
+                        <li><a href="wat-is-stepmania.html">Over StepMania</a></li>
+                        <li><a href="installeer-stepmania.html">Installatie</a></li>
+                        <li><a href="stepmania-gids.html">Spelgids</a></li>
+                    </ul>
+                </details>
+            </nav>
+
+            <!-- Navigatiemenu voor tablet en desktop -->
+            <nav class="horizontal-nav">
+                <ul class="horizontal-nav-content">
+                    <li><a href="wat-is-stepmania.html">Over StepMania</a></li>
+                    <li><a href="installeer-stepmania.html">Installatie</a></li>
+                    <li><a href="stepmania-gids.html">Spelgids</a></li>
+                </ul>
+            </nav>
+            <form method="GET" class="search-form">
+                <input type="search" name="search" id="search" placeholder="Zoeken">
+                <div class="search-icon"></div>
+            </form>
+        </header>
+
+        <main class="main-site-content">
+            <article class="main-site-article">
+                <header class="main-site-article-heading">
+                    <h1>Download en installatie</h1>
+                </header>
+                <section>
+                    <h2>Installatie op Windows</h2>
+                    <p>De installatie van StepMania op Windows verloopt als volgt:</p>
+                    <ol>
+                        <li>Ga naar <a target="_blank"
+                                href="https://www.stepmania.com/download/">https://www.stepmania.com/download/</a>
+                            en kies het veldje waarop "StepMania 5.0.12 (Windows) ~ 49 MB" staat. Dit zet het
+                            downloadproces in gang.
+                        </li>
+                        <li>
+                            Voer het programma (StepMania-5.0.12-win32.exe) uit zodra het downloaden voltooid is.
+                        </li>
+                        <li>
+                            Volg de stappen van de installatiewizard.
+                        </li>
+                        <li>
+                            Als het installatieproces is afgerond, kan je beginnen met spelen.
+                            Helaas kan het voorkomen dat bij het opstarten van het spel de foutmelding
+                            "The program can't start because d3dx9_43.dll is missing from your computer"
+                            verschijnt. Om dit probleem te verhelpen, installeer je DirectX, wat
+                            <a target="_blank"
+                                href="https://support.microsoft.com/en-us/topic/how-to-install-the-latest-version-of-directx-d1f5ffa5-dae2-246c-91b1-ee1e973ed8c2">
+                                via Microsoft</a>
+                            kan.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Installatie op Mac</h2>
+                    <p>Voor Mac werkt het installeren zo:</p>
+                    <ol>
+                        <li>Ga naar <a target="_blank"
+                                href="https://www.stepmania.com/download/">https://www.stepmania.com/download/</a>
+                            en kies het veldje waarop "StepMania 5.0.12 (Mac) ~ 56 MB" staat. Het downloaden wordt nu
+                            in gang gezet.
+                        </li>
+                        <li>
+                            Zodra het downloaden afgerond is, moet je het bestand "StepMania-5.0.12-mac.dmg" in je
+                            map met downloads hebben. Dubbelklik het bestand en sleep het mapje (StepMania-5.0.12)
+                            naar je Desktop.
+                        </li>
+                        <li>
+                            Open dit mapje en start StepMania. Mogelijk verschijnt de melding "StepMania can't be
+                            opened because it is from an unidentified developer". Je kan dan gewoon op "OK" klikken.
+                        </li>
+                        <li>Vervolgens ga je naar Systeemvoorkeuren en kies je voor Beveiliging en privacy. Hier kan je
+                            StepMania toestemming geven om te openen.
+                        </li>
+                        <li>
+                            Als de applicatie nu opstart en de liedjes beginnen te laden, is alles in orde. Echter, als
+                            er een
+                            foutmelding in beeld komt zoals "Metric Common::ScreenWidth is missing" of "No NoteSkins
+                            found", klik
+                            dan op "Abort".
+                        </li>
+                        <li>
+                            Om deze foutmelding te verhelpen ga je naar de Terminal en hoef je alleen maar de command
+                            <code>xattr -dr com.apple.quarantine ~/Desktop/StepMania-5.0.12/</code>
+                            in te typen. Als er verder geen foutmelding in beeld komt, betekent het dat je het spel kan
+                            opstarten zonder verdere problemen.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Installatie op Linux</h2>
+                    <p>Ten slotte zijn dit de stappen voor installatie op Linux:</p>
+                    <ol>
+                        <li>
+                            Open de terminal en voer de command
+                            <code>sudo add-apt-repository ppa:ubuntuhandbook1/stepmania</code>
+                            uit. Voer je wachtwoord in en druk op "Enter".
+                        </li>
+                        <li>
+                            Installeer vervolgens het spel met behulp van de command
+                            <code>sudo apt update && apt install stepmania</code>.
+                        </li>
+                        <li>
+                            Als de installatie is afgerond, kun je de applicatie starten.
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Song packs installeren</h2>
+                    <p>
+                        StepMania wordt standaard aangeleverd met een pack waar drie liedjes in zitten.
+                        Het uitbreiden van je aantal song packs kan als volgt:
+                    </p>
+                    <ol>
+                        <li>
+                            Ga naar <a href="https://search.stepmaniaonline.net/"
+                                target="_blank">https://search.stepmaniaonline.net/</a>,
+                            waar packs te vinden zijn voor diverse genres.
+                        </li>
+                        <li>
+                            Kies eentje uit en download het. De song pack wordt opgeslagen als een zipbestand.
+                        </li>
+                        <li>
+                            Pak het zipbestand uit en kopieer of knip het uitgepakte bestand. Ga vervolgens naar de map
+                            van StepMania en
+                            plak de volledige map in Songs. Als je het spel start, wordt de pack samen
+                            met de liedjes geladen
+                            en kan je het spelen.
+                        </li>
+                    </ol>
+                </section>
+            </article>
+        </main>
+
+        <aside class="newsletter">
+            <div class="newsletter-head">
+                <h2>Nieuwsbrief</h2>
+                <p>Schrijf je in voor de laatste updates over StepMania en meer!</p>
+            </div>
+            <form method="POST" class="newsletter-form">
+                <div class="form-row">
+                    <input type="email" name="name" id="name" placeholder="Voornaam">
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" id="email" placeholder="adres@voorbeeld.com">
+                </div>
+                <div class="form-row">
+                    <button type="submit">Inschrijven</button>
+                </div>
+            </form>
+        </aside>
+
+        <aside class="external-links">
+            <h2>Externe links</h2>
+            <ul>
+                <li>
+                    <a href="https://www.stepmania.com/" target="_blank">https://www.stepmania.com/</a>
+                    - Nieuws over StepMania
+                </li>
+                <li>
+                    <a href="https://search.stepmaniaonline.net/"
+                        target="_blank">https://search.stepmaniaonline.net/</a>
+                    - Zoek en download song packs
+                </li>
+                <li>
+                    <a href="https://zenius-i-vanisher.com/v5.2/simfiles.php"
+                        target="_blank">https://zenius-i-vanisher.com/v5.2/simfiles.php</a>
+                    - Voor zowel song packs als afzonderlijke liedjes
+                </li>
+                <li>
+                    <a href="https://www.twitch.tv/directory/game/StepMania"
+                        target="_blank">https://www.twitch.tv/directory/game/StepMania</a>
+                    - Volg spelers live op Twitch
+                </li>
+                <li>
+                    <a href="https://github.com/stepmania/stepmania"
+                        target="_blank">https://github.com/stepmania/stepmania</a>
+                    - Voor de broncode van StepMania
+                </li>
+            </ul>
+        </aside>
+
+        <footer class="site-footer">
+            <p>&copy; 2021 - Wessel Konstantinov</p>
+        </footer>
+    </div>
+</body>
+
+</html>
