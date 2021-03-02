@@ -16,7 +16,6 @@ body {
     display: grid;
     grid-gap: 2px;
     grid-auto-rows: minmax(50px, auto);
-    grid-template-columns: repeat(2, 1fr);
 }
 
 /* Header And Logo Styles */
@@ -301,6 +300,10 @@ body {
 /* Media Queries For Tablet Styles */
 @media only screen and (min-width: 768px) {
     /* Grid Layout */
+    .page {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .newsletter {
         grid-row: 10 / 16;
         grid-column: 1 / 2;
