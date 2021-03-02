@@ -29,7 +29,7 @@ body {
 }
 
 .site-header > a {
-    height: 36px; /* Voor een beter en mooiere centrering van de logo */
+    height: 36px; /* For a more consistent central alignment of the logo */
 }
 
 .site-logo {
@@ -39,7 +39,7 @@ body {
 }
 
 .horizontal-nav {
-    display: none; /* Zodat alleen het dropdown menu te zien is */
+    display: none; /* Only the dropdown menu should be visible */
 }
 
 /* Dropdown Menu Styles */
@@ -66,7 +66,7 @@ body {
     left: 0;
     content: "";
     cursor: default;
-  } /* Zodat het dropdown menu overal op de pagina te sluiten is */
+  } /* Enables the user to close the dropdown menu everywhere on the page */
 
 .dropdown-nav-icon {
     width: 36px;
@@ -313,13 +313,13 @@ body {
 
     /* Header And Navigation Styles */
     .dropdown-nav {
-        display: none; /* Zorgt ervoor dat de dropdown menu verdwijnt */
+        display: none; /* Makes the dropdown menu disappear */
     }
 
     .horizontal-nav {
         display: block;
         width: 100%;
-    } /* Horizontale navigatiemenu komt nu in de plaats */
+    } /* Horizontal navigation menu is now shown */
 
     .horizontal-nav ul {
         list-style: none;
